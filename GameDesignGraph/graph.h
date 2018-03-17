@@ -3,6 +3,9 @@
 #include <queue>
 using namespace std;
 
+
+//name = name of the vertex
+//costs = a vector of vertices and the costs to travel to them
 struct Vertex {
 	string name;
 	vector<Vertex, int> costs;

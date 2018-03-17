@@ -12,7 +12,8 @@ Code must be tested to insure it functions under all circumstances. Identify a n
 identify the expected results for a test plan, then execute the test plan and insure all test cases function properly. Be sure to document each step of the testing.*/
 int main(int argc, char *argv[])
 {
-
+	INIT();
+	QUIT();
 }
 
 
