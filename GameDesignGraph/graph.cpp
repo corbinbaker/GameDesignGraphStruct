@@ -6,11 +6,10 @@ struct Vertex {
 	string name;
 	vector<Vertex, int> costs;
 };
-
-
-vector<Vertex> vertices;
-
 */
+
+//GRAPH - strings for the vertices and ints for the weights
+vector<Vertex> vertices = vector<Vertex>();
 
 //void makeEmpty() – Initializes the graph to an empty state.
 void makeEmpty() {
@@ -20,7 +19,8 @@ void makeEmpty() {
 
 //void addVertex(string vertexname) – Add a vertex to the graph.
 void addVertex(string vertexname) {
-
+	Vertex* v = new Vertex(vertexname);
+	vertices.push_back(*v);
 }
 
 

@@ -9,11 +9,14 @@ using namespace std;
 struct Vertex {
 	string name;
 	vector<Vertex, int> costs;
+
+	Vertex(string n)
+	{
+		name = n;
+		costs = vector<Vertex, int>();
+	}
 };
 
-
-//GRAPH - strings for the vertices and ints for the weights
-vector<Vertex> vertices;
 
 //void makeEmpty() – Initializes the graph to an empty state.
 void makeEmpty();
