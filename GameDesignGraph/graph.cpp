@@ -14,7 +14,7 @@ vector<Vertex> vertices;
 
 //void makeEmpty() – Initializes the graph to an empty state.
 void makeEmpty() {
-
+	vertices.clear();
 }
 
 

@@ -3,7 +3,6 @@
 //Game Design: Assignment 5 || Implementing a Game Map in a Graph
 
 #include "main.h"
-#include "graph.h"
 #include "driver.h"
 
 /*Implement a directional weighted graph. The graph should be designed to use a string to identify each node and a movement cost to characterize an edge connecting two nodes.
@@ -12,7 +11,6 @@ Code must be tested to insure it functions under all circumstances. Identify a n
 identify the expected results for a test plan, then execute the test plan and insure all test cases function properly. Be sure to document each step of the testing.*/
 int main(int argc, char *argv[])
 {
-	INIT();
 	QUIT();
 }
 
