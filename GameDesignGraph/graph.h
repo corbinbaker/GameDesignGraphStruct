@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <queue>
+#include <map>
 using namespace std;
 
 
@@ -8,12 +9,26 @@ using namespace std;
 //costs = a vector of vertices and the costs to travel to them
 struct Vertex {
 	string name;
-	vector<Vertex, int> costs;
+	map<Vertex, int> costs;
+	vector<Vertex> adj;
 
 	Vertex(string n)
 	{
 		name = n;
-		costs = vector<Vertex, int>();
+		costs = map<Vertex, int>();
+		adj = vector<Vertex>();
+	}
+
+	Vertex()
+	{
+		
+	}
+
+	bool operator== (const Vertex&c) const {
+		if (this->name == c.name)
+			return true;
+		else
+			return false;
 	}
 };
 

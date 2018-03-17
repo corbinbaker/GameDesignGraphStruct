@@ -25,18 +25,52 @@ void addVertex(string vertexname) {
 
 
 //bool addEdge(string fromVertex, string toVertex, int cost) - Adds an edge from fromVertex to toVertex with a weight of cost.  Returns false if either vertex not found.
-bool addEdge(string fromVertex, string toVertex, int cost) {
+bool addEdge(Vertex fromVertex, Vertex toVertex, int cost) {
+	Vertex v1;
+	Vertex v2;
 
+	for (Vertex v : vertices) {
+		if (v == fromVertex)
+		{
+			v1 = v;
+		}
+
+		if (v == toVertex)
+		{
+			v2 = v;
+		}
+	}
+
+	if (v1.name.empty() || v2.name.empty())
+	{
+		return false;
+	}
+
+	else
+	{
+		//inserts cost values for both vertices
+		v1.costs.insert(pair<Vertex,int>(v2, cost));
+		v2.costs.insert(pair<Vertex,int>(v1, cost));
+	}
 }
 
 
 //int getWeight( string fromVertex, string toVertex ) – Returns the cost to move from fromVertex to adjacent vertex toVertex. If the two vertices are not adjacent or not found, returns -1.
-int getWeight(string fromVertex, string toVertex) {
+int getWeight(Vertex fromVertex, Vertex toVertex) {
+	map<Vertex, int>::iterator it;
 
+	for (it = fromVertex.costs.begin(); it != fromVertex.costs.end(); ++it)
+	{
+		if ((it)->first.name == fromVertex.name)
+		{
+			
+		}
+
+	}
 }
 
 
 //bool getAdjacent( string fromVertex, queue vertexQue) – given the vertex fromVertex, return a queue containing the adjacent vertices.  Returns false if vertex not found.
-bool getAdjacent(string fromVertex, queue<string> vertexQue) {
+bool getAdjacent(Vertex fromVertex, queue<Vertex> vertexQue) {
 
 }
